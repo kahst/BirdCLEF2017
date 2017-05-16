@@ -1,1 +1,1 @@
-
+Pre-trained model from our submission: https://box.tu-chemnitz.de/index.php/s/iPUsAA94KPtWaVf
