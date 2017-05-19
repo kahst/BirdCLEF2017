@@ -29,11 +29,6 @@ from lasagne import objectives
 from lasagne import updates
 from lasagne import regularization
 
-try:
-    from lasagne.layers.dnn import BatchNormDNNLayer as BatchNormLayer
-except ImportError:
-    from lasagne.layers import BatchNormLayer
-
 print "...DONE!"
 ######################## CONFIG #########################
 #Fixed random seed
@@ -86,7 +81,7 @@ INIT_GAIN = 1.0 #1.0 if elu, sqrt(2) if rectify
 
 #Training params
 BATCH_SIZE = 128
-LEARNING_RATE = {0:0.01, 35:0.0001, 55:0.00001} #epoch:lr
+LEARNING_RATE = {1:0.01, 35:0.0001, 55:0.00001} #epoch:lr
 LR_DESCENT = True
 L2_WEIGHT = 1e-4
 OPTIMIZER='adam' #'adam' or 'nesterov'
@@ -134,23 +129,11 @@ def parseDataset():
 
             #Do we want to correct class imbalance?
             #This will affect validation scores as we use some samples in TRAIN and VAL
-            #You could use cost-sensitive loss instead
             while sample_count[c] < MIN_SAMPLES_PER_CLASS:
                 images += [c_images[RANDOM.randint(0, len(c_images))]]
                 sample_count[c] += 1
 
-    classes = tclasses
-
-    #calculate class probabilities
-    n = float(len(images))
-    class_probabilities = []
-    for c in classes:
-        class_probabilities.append(sample_count[c] / n)
-
-    #calculate false-classification costs based on class probabilities
-    prob = np.asarray(class_probabilities, dtype='float32')
-    prob -= prob.min()
-    prob /= prob.max()
+    classes = tclasses    
 
     #shuffle image paths
     images = shuffle(images, random_state=RANDOM)[:MAX_SAMPLES]
