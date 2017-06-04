@@ -379,7 +379,7 @@ def getPredictionFuntion(net):
 
     print "COMPILING THEANO TEST FUNCTION...",
     start = time.time()
-    test_net = theano.function([l.get_all_layers(NET)[0].input_var], net_output, allow_input_downcast=True)
+    test_net = theano.function([l.get_all_layers(net)[0].input_var], net_output, allow_input_downcast=True)
     print "DONE! (", int(time.time() - start), "s )"
 
     return test_net
