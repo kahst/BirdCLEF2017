@@ -22,7 +22,7 @@ Please cite the paper in your publications if it helps your research.
 }
 ```
 
-<i>Note: A download link for the PDF version of the working notes will be added, as soon as they are published.</i>
+<b>You can download our working notes here:</b> [TUCMI BirdCLEF Working Notes PDF](https://box.tu-chemnitz.de/index.php/s/RCXS6jHr2f6jypc) <i>(Unpublished draft version)</i>
 
 ## Installation
 This is a Thenao/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 14.04 LTS but should work with other distributions as well.
@@ -109,6 +109,14 @@ You can train your own model using either the BirdCLEF2017 training data or your
 - `SNAPSHOT_EPOCHS` in order to continuously save model snapshots; select `[-1]` to save after every epoch; the best model params will be saved automatically after training
 
 There are a lot more options - most should be self-explanatory. If you have any questions regarding the settings or the training process, feel free to contact us. 
+
+<b>Note:</b> In order to keep results reproducible with fixed random seeds, you need to update your <i>.theanorc</i> file with the following lines:
+
+```
+[dnn.conv]
+algo_bwd_filer=deterministic
+algo_bwd_data=deterministic
+```
 
 Depending on your GPU, training will take while. Training with all 940k specs from the BirdCLEF2017 training data takes 1-2 hours per epoch on a NVIDIA P6000 and 2-4 hours on a NVIDIA TitanX depending on the type of model architecture used.
 
