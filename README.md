@@ -2,7 +2,7 @@
 By [Stefan Kahl](http://medien.informatik.tu-chemnitz.de/skahl/about/), [Thomas Wilhelm-Stein](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en), [Hussein Hussein](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en), [Holger Klinck](http://www.birds.cornell.edu/page.aspx?pid=1735&id=489), [Danny Kowerko](https://www.tu-chemnitz.de/informatik/mc/staff.php.en), [Marc Ritter](), and [Maximilian Eibl](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en)
 
 ## Introduction
-Code repo for our submission to the LifeCLEF bird identification task BirdlCLEF2017. This is a refined version of our original code described in the working notes. We added comments and removed some of the boilerplate code. If you have any questions or problems running the scripts, don't hesitate to contact us.
+Code repo for our submission to the LifeCLEF bird identification task BirdCLEF2017. This is a refined version of our original code described in the working notes. We added comments and removed some of the boilerplate code. If you have any questions or problems running the scripts, don't hesitate to contact us.
 
 Contact:  [Stefan Kahl](http://medien.informatik.tu-chemnitz.de/skahl/about/), [Technische Universität Chemnitz](https://www.tu-chemnitz.de/index.html.en), [Media Informatics](https://www.tu-chemnitz.de/informatik/Medieninformatik/index.php.en)
 
