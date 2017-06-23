@@ -22,7 +22,7 @@ Please cite the paper in your publications if it helps your research.
 }
 ```
 
-<b>You can download our working notes here:</b> [TUCMI BirdCLEF Working Notes PDF](https://box.tu-chemnitz.de/index.php/s/RCXS6jHr2f6jypc) <i>(Unpublished draft version)</i>
+<b>You can download our working notes here:</b> [TUCMI BirdCLEF Working Notes PDF](https://box.tu-chemnitz.de/index.php/s/zoc8jX7xToXFg1b) <i>(Unpublished draft version)</i>
 
 ## Installation
 This is a Thenao/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 14.04 LTS but should work with other distributions as well.
