@@ -1,0 +1,1 @@
+Sample file taken from the BirdCLEF2017 training data containing sounds of Asthenes moreirae.
