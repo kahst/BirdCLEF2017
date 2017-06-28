@@ -134,6 +134,36 @@ After training, you can test models and evaluate them on your local validation s
 
 If you use any other than the BirdCLEF trainig data, you will have to adjust your ground truth before you can evaluate. You should do this by implementing the `getGroundThruth()` function of the script.
 
-This repo will not suffice for real-world applications, but you should be able to adapt the testing script to your specific needs.
+## Testing
+If you want to make predictions for a single, unlabeled wav-file, you can call the script <b>birdCLEF_test.py</b> via the command shell. You can use this script as is, no training required. Simply follow these steps:
 
-We will keep this repo updated and will provide suitable testing functionality in the future.
+<b>1. Download pre-trained model:</b>
+```
+sh model/fetch_model.sh
+```
+<b>2. Execute script:</b>
+```
+python birdCLEF_test.py --filename 'dataset/example_file.wav' --overlap 4 --results 5 --confidence 0.01
+```
+If everything goes well, you should see an output just like this:
+
+```
+HANDLING IMPORTS... DONE!
+BUILDING MODEL TYPE 1 ...
+	FINAL POOL OUT SHAPE: (None, 1024, 4, 8)
+...DONE!
+MODEL HAS 8 WEIGHTED LAYERS
+MODEL HAS 24221980 PARAMS
+IMPORTING MODEL PARAMS... DONE!
+COMPILING THEANO TEST FUNCTION... DONE! ( 2 s )
+TESTING: dataset/example_file.wav
+TOP PREDICTION(S):
+	Asthenes moreirae gshgib 96 %
+PREDICTION FOR 48 SPECS TOOK 1310 ms ( 27 ms/spec )
+```
+<b>Note:</b> You do not need to specify values for overlap, results and confidence – those are optional. 
+If you want to change the pre-trained model, model type or multi label settings, you need to edit the script itself.
+
+This repo might not suffice for real-world applications, but you should be able to adapt the testing script to your specific needs.
+
+We will keep this repo updated and will provide more testing functionality in the future.
