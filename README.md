@@ -1,5 +1,5 @@
 # Large-Scale Bird Sound Classification using Convolutional Neural Networks
-By [Stefan Kahl](http://medien.informatik.tu-chemnitz.de/skahl/about/), [Thomas Wilhelm-Stein](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en), [Hussein Hussein](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en), [Holger Klinck](http://www.birds.cornell.edu/page.aspx?pid=1735&id=489), [Danny Kowerko](https://www.tu-chemnitz.de/informatik/mc/staff.php.en), [Marc Ritter](), and [Maximilian Eibl](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en)
+By [Stefan Kahl](http://medien.informatik.tu-chemnitz.de/skahl/about/), [Thomas Wilhelm-Stein](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en), [Hussein Hussein](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en), [Holger Klinck](http://www.birds.cornell.edu/page.aspx?pid=1735&id=489), [Danny Kowerko](https://www.tu-chemnitz.de/informatik/mc/staff.php.en), [Marc Ritter](https://www.cb.hs-mittweida.de/professoren/informatik/prof-ritter.html), and [Maximilian Eibl](https://www.tu-chemnitz.de/informatik/HomePages/Medieninformatik/team.php.en)
 
 ## Introduction
 Code repo for our submission to the LifeCLEF bird identification task BirdCLEF2017. This is a refined version of our original code described in the working notes. We added comments and removed some of the boilerplate code. If you have any questions or problems running the scripts, don't hesitate to contact us.
@@ -94,7 +94,7 @@ You can train your own model using either the BirdCLEF2017 training data or your
 
 - `MULTI_LABEL` for softmax outputs (False) or sigmoid outputs (True); Activates batch augmentation (see working notes for details)
 
-- `IM_SIZE` defining the size of input images, spectrograms will be scaled accordingly (Default = 512 x256 pixels)
+- `IM_SIZE` defining the size of input images, spectrograms will be scaled accordingly (Default = 512x256 pixels)
 
 - `IM_AUGMENTATION` selecting different techniques for dataset augmentation
 
